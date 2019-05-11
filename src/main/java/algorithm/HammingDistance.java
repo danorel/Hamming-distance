@@ -1,9 +1,11 @@
 package algorithm;
 
-public class HammingDistance {
-    public static int calculate(String source, String comparing){
-        if(source.length() == comparing.length()){
-            return compute(source, comparing);
+public class HammingDistance{
+    public static int calculate(Comparable source, Comparable comparing){
+        String sourceStr = source.toString();
+        String comparingStr = comparing.toString();
+        if(sourceStr.length() == comparingStr.length()){
+            return compute(sourceStr, comparingStr);
         } else {
             throw new IllegalArgumentException(
                     "Error. Cannot compute the hamming distance. The parameters have different length!"
